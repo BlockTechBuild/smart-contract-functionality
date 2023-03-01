@@ -44,4 +44,8 @@ The swap function takes one argument _token1Amount which is the amount of token1
 The function first transfers the token1 from the user to the smart contract using the transferFrom function of the token1 contract. It then calculates the amount of token2 to transfer to the user and deducts the fee from it. The remaining amount is transferred to the user using the transfer function of the token2 contract.
 
 The fee amount is also calculated and transferred to the owner of the smart contract using the transfer function of the token2 contract.
+
+Finally, the function emits a Swap event indicating the address of the user, the amount of token1 and token2 swapped.
+
+Note that this is a simple example, and a more complex swap function may be required depending on the requirements of your dApp. It is important to thoroughly test and audit your smart contract before deploying it to a production environment.
 **********/
