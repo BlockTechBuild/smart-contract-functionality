@@ -34,3 +34,14 @@ contract TokenSwap {
         emit Swap(msg.sender, _token1Amount, token2Amount);
     }
 }
+
+
+/**********
+we define a smart contract called TokenSwap that allows users to swap one ERC20 token (token1) for another ERC20 token (token2) at a specified rate. The smart contract also charges a fee for each swap.
+
+The swap function takes one argument _token1Amount which is the amount of token1 that the user wants to swap. The function calculates the equivalent amount of token2 using the rate and deducts the fee before transferring the tokens.
+
+The function first transfers the token1 from the user to the smart contract using the transferFrom function of the token1 contract. It then calculates the amount of token2 to transfer to the user and deducts the fee from it. The remaining amount is transferred to the user using the transfer function of the token2 contract.
+
+The fee amount is also calculated and transferred to the owner of the smart contract using the transfer function of the token2 contract.
+**********/
